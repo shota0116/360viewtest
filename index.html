@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <script>
-      AFRAME.registerComponent('custom-look-controls', {
-        schema: {
-          reverseMouseDrag: {type: 'boolean', default: false}
-        },
-        init: function () {
-          this.el.setAttribute('look-controls', 'reverseMouseDrag', this.data.reverseMouseDrag);
-        }
-      });
-    </script>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script>
+    AFRAME.registerComponent('custom-look-controls', {
+      schema: {
+        reverseMouseDrag: { type: 'boolean', default: false }
+      },
+      init: function () {
+        this.el.setAttribute('look-controls', 'reverseMouseDrag', this.data.reverseMouseDrag);
+      }
+    });
+  </script>
 </head>
 
 <body>
-    <a-scene vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" cursor="fuse: false; rayOrigin: mouse">
-        <a-sky src="GS__0014.jpg" rotation="0 0 0"></a-sky>
-        <a-entity camera custom-look-controls="reverseMouseDrag: true"></a-entity>
-    </a-scene>
+  <a-scene>
+    <!--vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" cursor="fuse: false; rayOrigin: mouse">-->
+    <a-sky src="GS__0014.jpg" rotation="0 0 0"></a-sky>
+    <a-entity camera custom-look-controls="reverseMouseDrag: true"></a-entity>
+  </a-scene>
 </body>
 
 </html>
