@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>360 Panorama Viewer : A-Frame : Image</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- A-frameの読み込み -->
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+<!-- シーン -->
+<a-scene>
+  <!-- 素材 -->
+  <a-assets>
+    <img id="sky" src="GS__0014.JPG" />
+  </a-assets>
+  <!-- 全天球背景 -->
+  <a-sky src="#sky" rotation="0 -130 0"></a-sky>
+</a-scene>
+</body>
+</html>
